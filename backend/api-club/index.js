@@ -1,3 +1,4 @@
+const cors = require('cors')
 const path = require('path');
 const express = require('express'); // Importamos express
 const dotenv = require('dotenv');
@@ -5,6 +6,8 @@ dotenv.config();
 
 const conectarDB = require('./src/config/db');
 conectarDB();
+const app = express(); // Creamos la app
+app.use(cors())
 
 // Routes
 const librosLeidosRoutes = require('./src/routes/librosleidos.routes');
@@ -12,7 +15,6 @@ const proximosLibrosRoutes = require('./src/routes/proximoslibros.routes');
 const miembrosRoutes = require('./src/routes/miembros.routes');
 
 
-const app = express(); // Creamos la app
 const PORT = process.env.PORT || 3000; // Puerto donde escuchará el servidor
 
 

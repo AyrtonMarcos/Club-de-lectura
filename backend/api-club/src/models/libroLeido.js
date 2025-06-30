@@ -24,7 +24,8 @@ const libroLeidoSchema = new mongoose.Schema({
     required: true
   },
   imagen: {
-    type: String
+    type: String,
+    required: true
   }
 }, {
   collection: 'libros_leidos'  
