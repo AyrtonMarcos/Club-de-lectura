@@ -26,6 +26,9 @@ const proximoSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Miembro',
     required: true
+  },
+  imagen: {
+    type: String
   }
   }, { collection: 'proximos_libros'
 });

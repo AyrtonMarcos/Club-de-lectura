@@ -22,6 +22,9 @@ const libroLeidoSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Miembro',
     required: true
+  },
+  imagen: {
+    type: String
   }
 }, {
   collection: 'libros_leidos'  
