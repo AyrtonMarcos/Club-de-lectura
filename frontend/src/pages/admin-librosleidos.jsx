@@ -32,7 +32,17 @@ function AdminPanel() {
   }
 
   const handleChange = (e) => {
-    setNuevoLibro({ ...nuevoLibro, [e.target.name]: e.target.value })
+    setNuevoLibro({ ...nuevoLibro,
+  [e.target.name]: e.target.value,
+  miembro: {
+    id:"683f92653afae89c58b21469",
+    nombre: "Martina",
+    email: "martina.diazsammaroni@gmail.com",
+    generoPreferido: "Policial",
+    esAdmin: true,
+    username: "MMDS",
+  }
+})
   }
 
   const handleSubmit = (e) => {
